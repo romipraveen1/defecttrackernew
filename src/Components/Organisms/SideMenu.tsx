@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import { Layout, Menu } from "antd";
-import {
-  TeamOutlined,
-  UserOutlined,
-  FileOutlined,
-  DesktopOutlined,
-  PieChartOutlined,
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-} from "@ant-design/icons";
+import { TeamOutlined, UserOutlined, DesktopOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
@@ -23,22 +16,16 @@ const SideMenu = () => {
   };
   return (
     <Menu
+      style={{ height: "100vh" }}
       theme="dark"
       mode="inline"
       defaultSelectedKeys={["3"]}
       defaultOpenKeys={["sub1"]}
     >
-      <Menu.Item key="2" icon={<DesktopOutlined />}>
-        Option 2
-      </Menu.Item>
-      <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-        <Menu.Item key="3">ADD DEFECT</Menu.Item>
-        <Menu.Item key="4">Bill</Menu.Item>
-        <Menu.Item key="5">Alex</Menu.Item>
-      </SubMenu>
-      <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-        <Menu.Item key="6">Team 1</Menu.Item>
-        <Menu.Item key="8">Team 2</Menu.Item>
+      <SubMenu key="sub1" icon={<UserOutlined />} title="Dashboard">
+        <Menu.Item key="3">
+          <Link to="/developer">Developer</Link>
+        </Menu.Item>
       </SubMenu>
     </Menu>
   );
