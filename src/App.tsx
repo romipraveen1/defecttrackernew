@@ -8,8 +8,8 @@ import Developer from "./Pages/Developer";
 function App() {
   return (
     <>
-      <Switch>
-        <DashBoard>
+      <DashBoard>
+        <Switch>
           <Route path="/calender">
             <Calender />
           </Route>
@@ -21,10 +21,8 @@ function App() {
           <Route path="/developer">
             <Developer />
           </Route>
-        </DashBoard>
-      </Switch>
-
-      <DashBoard />
+        </Switch>
+      </DashBoard>
     </>
   );
 }

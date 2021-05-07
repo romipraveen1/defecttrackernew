@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { Col, Layout, Menu, Row } from "antd";
-import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
+import { Col, Divider, Layout, Menu, Row } from "antd";
+import {
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  BellOutlined,
+} from "@ant-design/icons";
+import CustomAvatar from "../Atoms/Avatar/CustomAvatar";
 
 const HeaderTop = (props: any) => {
   const { collapsed, toggle } = props;
-  // const toggle = () => {
-  //   setCollapsed({
-  //     collapsed: !collapsed.collapsed,
-  //   });
-  // };
+
   return (
     <>
-      <Row>
+      <Row style={{ paddingLeft: " 25px", paddingRight: "25px" }} justify="end">
         <Col span={12}>
           {React.createElement(
             collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
@@ -21,7 +22,10 @@ const HeaderTop = (props: any) => {
             }
           )}
         </Col>
-        <Col span={12}>{/* <BellOutlined /> */}</Col>
+        <Col span={12}>
+          <BellOutlined />
+          <CustomAvatar />
+        </Col>
       </Row>
     </>
   );
