@@ -8,6 +8,7 @@ let roud = {
 
 const CustomCard = (props: any) => {
   const {
+    title,
     name,
     span,
     actions,
@@ -20,12 +21,17 @@ const CustomCard = (props: any) => {
     size,
     onTabChange,
     tabList,
+    hoverable,
     type,
+    style,
   } = props;
   console.log(name);
   return (
     <Col span={span}>
       <Card
+        style={type === "round" ? roud : { ...style }}
+        hoverable={hoverable}
+        title={title}
         actions={actions}
         activeTabKey={activeTabKey}
         bodyStyle={bodyStyle}

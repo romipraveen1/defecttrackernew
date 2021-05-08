@@ -3,14 +3,13 @@ import React from "react";
 import ProgressBar from "../Components/Atoms/ProgressBar/ProgressBar";
 import AreaChart from "../Components/Molecules/AreaChart/AreaChart";
 import CustomCard from "../Components/Molecules/Card/CustomCards";
-import { StyledCard } from "../Components/StyledComponents/StyledCard";
 
 const Developer = () => {
   return (
     <div>
       <Row gutter={48}>
         <Col span={12}>
-          <StyledCard>
+          <CustomCard>
             <ProgressBar
               width="100%"
               height="10"
@@ -40,12 +39,12 @@ const Developer = () => {
               color={["#21C299", "#f5f5f5d4"]}
               percent={0.3}
             />
-          </StyledCard>
+          </CustomCard>
         </Col>
         <Col span={12} style={{ gridGap: "20px" }}>
-          <StyledCard>
+          <CustomCard>
             <AreaChart title="Total Defect & Closed Defect" />
-          </StyledCard>
+          </CustomCard>
         </Col>
       </Row>
     </div>

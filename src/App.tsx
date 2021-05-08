@@ -4,6 +4,7 @@ import DashBoard from "./Layouts/DashBoard";
 import Calender from "./Components/Molecules/Calender";
 import CustomButton from "./Components/Atoms/CustomButton";
 import Developer from "./Pages/Developer";
+import Company from "./Pages/Company";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/developer">
             <Developer />
+          </Route>
+          <Route path="/company">
+            <Company />
           </Route>
         </Switch>
       </DashBoard>
